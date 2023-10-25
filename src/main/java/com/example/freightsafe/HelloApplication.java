@@ -18,6 +18,18 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        EquipmentInspection day1 = new EquipmentInspection();
+        day1.promptUserInput();
+
+
+        if(day1.checkInspectionReport() == false){
+            System.out.println("Inspection failed, please take action");
+        } else {
+            System.out.println("Inspection passed, drive safe");
+        }
+
+
+
     }
+
 }

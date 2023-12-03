@@ -1,5 +1,7 @@
 package com.example.freightsafe;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -23,13 +25,16 @@ public class DriverAvailabilityController implements Initializable {
     @FXML
     private TableColumn<Driver, Boolean> driverTVcdl, driverTVavailability;
 
-
+    private ObservableList<Driver> data =
+            FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         driverTVname.setCellValueFactory(new PropertyValueFactory<>("name"));
         driverTVcdl.setCellValueFactory(new PropertyValueFactory<>("hasCDL"));
         driverTVavailability.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
 
+
+        //we have to populate the observabale list upon initializaiton with the database info
 
 
     }

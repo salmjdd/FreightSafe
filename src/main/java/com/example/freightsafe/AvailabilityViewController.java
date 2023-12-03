@@ -1,5 +1,7 @@
 package com.example.freightsafe;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -47,11 +49,12 @@ public class AvailabilityViewController implements Initializable {
 
 
 
+    private ObservableList<EquipmentUnit> data =
+            FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        //open connection
-
+        //we have to populate the observabale list upon initializaiton with the database info
 
         tvNumber.setCellValueFactory(new PropertyValueFactory<>("truckNumber"));
         tvMiles.setCellValueFactory(new PropertyValueFactory<>("milesDriven"));

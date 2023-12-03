@@ -3,6 +3,7 @@ package com.example.freightsafe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -14,7 +15,7 @@ public class HelloController {
     @FXML
     public TextField userText;
     @FXML
-    public TextField passwordText;
+    public PasswordField passwordText;
     @FXML
     public Text statusText;
     public DataLoader test1 = new DataLoader();
@@ -32,7 +33,6 @@ public class HelloController {
         Hashtable driverHash = test1.getDriverHash();
         Hashtable agentHash = test1.getAgentHash();
         String user = "", pass = "", enteredpass = "";
-        int numattempts = 0;
         String userID = "";
 
             user = userText.getText();
@@ -46,6 +46,11 @@ public class HelloController {
                     statusText.setText("Invalid password!");
                 } else {
                     statusText.setText("Login successful!");
+                    if(driverHash.containsKey(user)){ //if the username was in the driverHash
+                        //switch to driver landing page (dont have that yet need to make one)
+                    } else { //only other case is that the username was in the agentHash
+                        //switch to agentLandingPage
+                    }
                 }
             }
 

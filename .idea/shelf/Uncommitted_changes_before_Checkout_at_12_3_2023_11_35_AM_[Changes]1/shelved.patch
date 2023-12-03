@@ -1,0 +1,32 @@
+Index: src/main/resources/com/example/freightsafe/otrProfileView.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/freightsafe/otrProfileView.fxml b/src/main/resources/com/example/freightsafe/otrProfileView.fxml
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/com/example/freightsafe/otrProfileView.fxml	
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import java.lang.*?>
++<?import java.util.*?>
++<?import javafx.scene.*?>
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++
++<AnchorPane xmlns="http://javafx.com/javafx"
++            xmlns:fx="http://javafx.com/fxml"
++            fx:controller="com.example.freightsafe.OTRProfileController"
++            prefHeight="400.0" prefWidth="600.0">
++
++</AnchorPane>
+Index: src/main/java/com/example/freightsafe/OTRProfileController.java
+===================================================================
+diff --git a/src/main/java/com/example/freightsafe/OTRProfileController.java b/src/main/java/com/example/freightsafe/OTRProfileController.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/freightsafe/OTRProfileController.java	
+@@ -0,0 +1,4 @@
++package com.example.freightsafe;
++
++public class OTRProfileController {
++}

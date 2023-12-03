@@ -1,6 +1,6 @@
 package com.example.freightsafe;
 
-public class RouteDriver {
+public class RouteDriver extends Driver implements DriverQualifications {
     private double payRate;
     private double startTime;
     private double endTime;
@@ -39,5 +39,27 @@ public class RouteDriver {
 
     public void setEndTime(double endTime) {
         this.endTime = endTime;
+    }
+
+    @Override
+    public boolean checkHours() {
+        //check hours
+        if ((getHoursDriven() >= 8.5) && !getHasTakenBreak())
+            return false;
+        return true;
+    }
+
+
+    @Override
+    public boolean checkCredentials() {
+        return false;
+    }
+
+    @Override
+    public boolean checkAge() {
+        if (isUnder21()) {
+            return false;
+        }
+        return true;
     }
 }

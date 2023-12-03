@@ -1,0 +1,23 @@
+Index: src/main/java/com/example/freightsafe/DriverQualifications.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.freightsafe;\r\n\r\npublic interface DriverQualifications {\r\n    public boolean checkHours();\r\n    public boolean checkCredentials();\r\n    public boolean checkAge();\r\n\r\n    //Check:\r\n       /*\r\n              I feel like these methods should be in a controller\r\n              class or smth. Unless we're storing an instance of drivers,\r\n              it doesnt make sense to add/remove a driver to a driver obhject.\r\n        */\r\n       /*public void addDriver(Driver d);\r\n       public Driver removeDriver();*/\r\n\r\n\r\n\r\n}
+===================================================================
+diff --git a/src/main/java/com/example/freightsafe/DriverQualifications.java b/src/main/java/com/example/freightsafe/DriverQualifications.java
+--- a/src/main/java/com/example/freightsafe/DriverQualifications.java	
++++ b/src/main/java/com/example/freightsafe/DriverQualifications.java	
+@@ -5,14 +5,6 @@
+     public boolean checkCredentials();
+     public boolean checkAge();
+ 
+-    //Check:
+-       /*
+-              I feel like these methods should be in a controller
+-              class or smth. Unless we're storing an instance of drivers,
+-              it doesnt make sense to add/remove a driver to a driver obhject.
+-        */
+-       /*public void addDriver(Driver d);
+-       public Driver removeDriver();*/
+ 
+ 
+ 

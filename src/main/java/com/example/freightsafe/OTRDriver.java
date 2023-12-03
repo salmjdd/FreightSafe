@@ -12,6 +12,8 @@ public class OTRDriver extends Driver implements DriverQualifications{
         endOdometer = 0.0;
     }
 
+
+
     public OTRDriver(double rate, double start, double end) {
         payRate = rate;
         startOdometer = start;
@@ -73,16 +75,5 @@ public class OTRDriver extends Driver implements DriverQualifications{
         return true;
     }
 
-    //since we're not storing a collection of drivers, maybe this
-    //method should be used in the controller classes.
 
-//    @Override
-//    public void addDriver(Driver d) {
-//
-//    }
-//
-//    @Override
-//    public Driver removeDriver() {
-//        return null;
-//    }
 }

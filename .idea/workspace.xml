@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="added observable list">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2XV5rjRZLinLdXWlMlNCgOWzATS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "driver-profile-viewa",
+    "last_opened_file_path": "C:/Users/micha/IdeaProjects/CSC311/Capstone",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="" />
+      <created>1698701609424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698701609424</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'">
+      <option name="closed" value="true" />
+      <created>1698702072549</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698702072549</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated driver classes&#10;updated truck classes to have truck # field">
+      <option name="closed" value="true" />
+      <created>1701633669400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701633669400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gui for truck output">
+      <option name="closed" value="true" />
+      <created>1701636431050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701636431050</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gui for driver output">
+      <option name="closed" value="true" />
+      <created>1701637632727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701637632727</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added observable list">
+      <option name="closed" value="true" />
+      <created>1701637926226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701637926226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'" />
+    <MESSAGE value="Updated driver classes&#10;updated truck classes to have truck # field" />
+    <MESSAGE value="gui for truck output" />
+    <MESSAGE value="gui for driver output" />
+    <MESSAGE value="added observable list" />
+    <option name="LAST_COMMIT_MESSAGE" value="added observable list" />
+  </component>
+</project>

@@ -50,6 +50,11 @@
           </font>
         </Text>
         <Button id="btnLogin" layoutX="513.0" layoutY="318.0" mnemonicParsing="false" onAction="#loginHandler" text="Login" />
+            <Text fx:id="statusText" fill="WHITE" layoutX="428.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input info!" textAlignment="CENTER" wrappingWidth="216.20904541015625">
+               <font>
+                  <Font name="OCR A Extended" size="14.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

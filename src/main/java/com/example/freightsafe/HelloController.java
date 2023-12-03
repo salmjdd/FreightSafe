@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -14,6 +15,8 @@ public class HelloController {
     public TextField userText;
     @FXML
     public TextField passwordText;
+    @FXML
+    public Text statusText;
     public DataLoader test1 = new DataLoader();
 
 
@@ -30,35 +33,22 @@ public class HelloController {
         Hashtable agentHash = test1.getAgentHash();
         String user = "", pass = "", enteredpass = "";
         int numattempts = 0;
-        boolean loginValid = false;
         String userID = "";
 
-        System.out.println("Welcome to FreightSafe");
-
-        do {
-            System.out.print("Enter your userID: ");
             user = userText.getText();
 
             if ((!driverHash.containsKey(user) && (!agentHash.containsKey(user)))){
-                System.out.println("Username is Invalid!");
+                statusText.setText("Invalid username!");
             } else {
-                System.out.print("Enter your password: ");
                 enteredpass = passwordText.getText();
                 pass = (String)driverHash.get(user);
                 if (!enteredpass.equals(pass)) {
-                    System.out.println("Password is Invalid!");
+                    statusText.setText("Invalid password!");
                 } else {
-                    loginValid = true;
-                    userID = user;
+                    statusText.setText("Login successful!");
                 }
             }
-            numattempts++;
-        } while ((numattempts < 3) && (!loginValid));
-        if (!loginValid) {
-            System.out.println("Error: Number of attempts exceeded, program terminated!");
-            System.exit(100);
-        }
-        userID = user;
-        System.out.println("Login success!");
+
+
     }
 }

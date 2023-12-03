@@ -1,15 +1,15 @@
 package com.example.freightsafe;
 
 public class nonCDLUnit extends EquipmentUnit {
-    protected int truckNumber;
+
     protected int grossVehicleWeight;
     protected int vehicleLength;
-    public nonCDLUnit(int milesDriven,
+    public nonCDLUnit(int truckNum, int milesDriven,
                       boolean isAvailable,
                       int grossVehicleWeight,
                       int vehicleLength){
 
-        super(milesDriven, isAvailable);
+        super(truckNum, milesDriven, isAvailable );
 
         if (grossVehicleWeight > 26000 || vehicleLength > 26){
             throw new IllegalArgumentException("Vehicle requires CDL");

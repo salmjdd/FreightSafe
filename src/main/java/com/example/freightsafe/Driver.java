@@ -5,11 +5,37 @@ public class Driver {
     private int licenseNum;
     private int phoneNum;
     private boolean hasCDL;
-    private char CDLClass;
+    private char cdlClass;
     private boolean under21;
     private double hoursDriven;
     private boolean isAvailable;
     private boolean hasTakenBreak;
+
+
+    public Driver() {
+        name = "";
+        licenseNum = 0;
+        phoneNum = 0;
+        hasCDL = false;
+        cdlClass = 'z';
+        under21 = false;
+        hoursDriven = 0;
+        isAvailable = true;
+        hasTakenBreak = false;
+
+    }
+
+    public Driver(String name, int licenseNum, int phoneNum, boolean hasCDL, char cDLClass, boolean under21, double hoursDriven, boolean isAvailable, boolean hasTakenBreak) {
+        this.name = name;
+        this.licenseNum = licenseNum;
+        this.phoneNum = phoneNum;
+        this.hasCDL = hasCDL;
+        this.cdlClass = cDLClass;
+        this.under21 = under21;
+        this.hoursDriven = hoursDriven;
+        this.isAvailable = isAvailable;
+        this.hasTakenBreak = hasTakenBreak;
+    }
 
 
 
@@ -46,11 +72,11 @@ public class Driver {
     }
 
     public char getCDLClass() {
-        return CDLClass;
+        return cdlClass;
     }
 
-    public void setCDLClass(char CDLClass) {
-        this.CDLClass = CDLClass;
+    public void setCDLClass(char cdlClass) {
+        this.cdlClass = cdlClass;
     }
 
     public boolean isUnder21() {

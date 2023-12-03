@@ -1,6 +1,7 @@
 package com.example.freightsafe;
 
 public class nonCDLUnit extends EquipmentUnit {
+    protected int truckNumber;
     protected int grossVehicleWeight;
     protected int vehicleLength;
     public nonCDLUnit(int milesDriven,

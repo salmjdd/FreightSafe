@@ -1,6 +1,8 @@
 package com.example.freightsafe;
 
 public class cdlUnit extends EquipmentUnit{
+
+    protected int truckNumber;
     protected int grossVehicleWeight;
     protected int vehicleLength;
     public cdlUnit(int milesDriven,

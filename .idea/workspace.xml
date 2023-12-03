@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="current 12/03" />
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="current 12/03">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/availabilityView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_3_2023_11_35_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_3_2023_11_35_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_3_2023_11_35_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_3_2023_11_35_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/OTRDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/OTRDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/RouteDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/RouteDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/cdlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/cdlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/nonCDLUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/nonCDLUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/hello-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +29,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="integrating-driver" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +61,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/micha/IdeaProjects/CSC325/Seperate notes/MOD9",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "driver-profile-viewa",
+    "last_opened_file_path": "C:/Users/micha/IdeaProjects/CSC311/Capstone",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -72,6 +92,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

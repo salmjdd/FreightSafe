@@ -7,7 +7,7 @@ public class RouteDriver {
 
     public RouteDriver() {
         payRate = 0.0;
-        startTime =0.0;
+        startTime = 0.0;
         endTime = 0.0;
     }
 

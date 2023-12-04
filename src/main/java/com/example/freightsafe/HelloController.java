@@ -32,6 +32,8 @@ public class HelloController {
         System.out.println("test");
         Hashtable driverHash = test1.getDriverHash();
         Hashtable agentHash = test1.getAgentHash();
+        System.out.println(agentHash.containsKey("salmanmajid22"));
+        System.out.println(driverHash.containsKey("salmanmajid22"));
         String user = "", pass = "", enteredpass = "";
         String userID = "";
 
@@ -41,14 +43,20 @@ public class HelloController {
                 statusText.setText("Invalid username!");
             } else {
                 enteredpass = passwordText.getText();
-                pass = (String)driverHash.get(user);
+                if(driverHash.containsKey(user)) {
+                    pass = (String) driverHash.get(user);
+                } else {
+                    pass = (String) agentHash.get(user);
+                }
                 if (!enteredpass.equals(pass)) {
                     statusText.setText("Invalid password!");
                 } else {
                     statusText.setText("Login successful!");
                     if(driverHash.containsKey(user)){ //if the username was in the driverHash
+                        statusText.setText("Welcome driver");
                         //switch to driver landing page (dont have that yet need to make one)
                     } else { //only other case is that the username was in the agentHash
+                        statusText.setText("Welcome agent");
                         //switch to agentLandingPage
                     }
                 }

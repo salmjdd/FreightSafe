@@ -20,8 +20,8 @@
                   <Font name="OCR A Extended" size="14.0" />
                </font>
             </Text>
-            <Button layoutX="63.0" layoutY="315.0" mnemonicParsing="false" onAction="#viewDriversHandler" prefHeight="41.0" prefWidth="151.0" text="View Available Drivers" />
-            <Button layoutX="428.0" layoutY="315.0" mnemonicParsing="false" onAction="#viewTrucksHandler" prefHeight="41.0" prefWidth="151.0" text="View Available Equipment" />
+            <Button fx:id="driverButton" layoutX="63.0" layoutY="315.0" mnemonicParsing="false" onAction="#viewDriversHandler" prefHeight="41.0" prefWidth="151.0" text="View Available Drivers" />
+            <Button fx:id="equipmentButton" layoutX="428.0" layoutY="315.0" mnemonicParsing="false" onAction="#viewTrucksHandler" prefHeight="41.0" prefWidth="151.0" text="View Available Equipment" />
       </children>
     </AnchorPane>
   </children>

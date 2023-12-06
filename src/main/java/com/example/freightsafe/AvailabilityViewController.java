@@ -4,11 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,6 +26,9 @@ public class AvailabilityViewController implements Initializable {
 
     @FXML
     private TableColumn<EquipmentUnit,Boolean> tvAvailability;
+
+    @FXML
+    private Button returnButton;
 
     @FXML
     private TableView<EquipmentUnit> tv;
@@ -47,8 +53,7 @@ public class AvailabilityViewController implements Initializable {
      */
     @FXML
     private Label numberLabel, milesLabel, weightLabel, lengthLabel, availabilityLabel;
-
-
+    private Scene scene;
 
     private ObservableList<EquipmentUnit> data =
             FXCollections.observableArrayList();
@@ -63,6 +68,16 @@ public class AvailabilityViewController implements Initializable {
         tvAvailability.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Boolean>("isAvailable"));
         tv.setItems(data);
 
+        returnButton.setOnMouseClicked(mouseEvent -> {
+            try {
+                //scene = HelloApplication.getScene();
+                scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
+                HelloApplication.setScene(scene);
+                HelloApplication.setStage();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
 
 

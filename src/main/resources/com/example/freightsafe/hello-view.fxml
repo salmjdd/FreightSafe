@@ -21,9 +21,9 @@
           </font>
         </Label>
         <ImageView fitHeight="434.0" fitWidth="649.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-            <Image url="@C:/Users/cyber/IdeaProjects/FreightSafe/src/Types-of-Trucking-Services.jpg" />
-          </image>
+               <image>
+                  <Image url="@Types-of-Trucking-Services.jpg" />
+               </image>
         </ImageView>
         <TextField id="txtUserID" fx:id="userText" layoutX="450.0" layoutY="227.0" promptText="User ID">
           <font>

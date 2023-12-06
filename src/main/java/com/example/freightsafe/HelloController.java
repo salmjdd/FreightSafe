@@ -2,6 +2,7 @@ package com.example.freightsafe;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -18,6 +19,8 @@ public class HelloController {
     public PasswordField passwordText;
     @FXML
     public Text statusText;
+    private Scene scene;
+
     public DataLoader test1 = new DataLoader();
 
 
@@ -55,9 +58,15 @@ public class HelloController {
                     if(driverHash.containsKey(user)){ //if the username was in the driverHash
                         statusText.setText("Welcome driver");
                         //switch to driver landing page (dont have that yet need to make one)
+                        scene = new Scene(HelloApplication.loadFXML("driverLandingPage.fxml"));
+                        HelloApplication.setScene(scene);
+                        HelloApplication.setStage();
                     } else { //only other case is that the username was in the agentHash
                         statusText.setText("Welcome agent");
                         //switch to agentLandingPage
+                        scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
+                        HelloApplication.setScene(scene);
+                        HelloApplication.setStage();
                     }
                 }
             }

@@ -2,6 +2,7 @@ package com.example.freightsafe;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -10,20 +11,40 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class HelloApplication extends Application {
+
+    public static Scene scene;
+    public static Stage stage;
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws IOException {
+        stage = new Stage();
+        Scene scene = new Scene(loadFXML("hello-view.fxml"));
+
+        setScene(scene);
+        setStage();
     }
 
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
-
         launch();
+    }
 
+    public static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml));
+        return fxmlLoader.load();
+    }
+
+    public static Scene getScene() {
+        return scene;
+    }
+
+    public static void setScene(Scene s) {
+        scene = s;
+    }
+
+    public static void setStage(){
+        stage.setScene(getScene());
+        stage.show();
     }
 
 }

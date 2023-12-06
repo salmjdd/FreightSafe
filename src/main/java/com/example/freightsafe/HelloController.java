@@ -2,15 +2,18 @@ package com.example.freightsafe;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.Hashtable;
+import java.util.ResourceBundle;
 
-public class HelloController {
+public class HelloController implements Initializable {
     @FXML
     public TextField userText;
     @FXML
@@ -20,9 +23,16 @@ public class HelloController {
     public DataLoader test1 = new DataLoader();
 
 
-    public void initialize() throws SQLException, ClassNotFoundException, IOException {
-        test1.connectDB();
-        test1.loadData();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            test1.connectDB();
+            test1.loadData();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -51,4 +61,6 @@ public class HelloController {
 
 
     }
+
+
 }

@@ -25,7 +25,7 @@
               <columns>
                 <TableColumn fx:id="tvNumber" maxWidth="136.6667022705078" minWidth="-1.0" prefWidth="136.6667022705078" text="Number" />
                 <TableColumn fx:id="tvMiles" maxWidth="198.6667022705078" minWidth="-1.0" prefWidth="132.6666259765625" text="Miles" />
-                  <TableColumn fx:id="tvAvailability" maxWidth="288.00001525878906" minWidth="-1.0" prefWidth="117.99996948242188" text="Availability" />
+                 <TableColumn fx:id="tvAvailability" maxWidth="288.00001525878906" minWidth="-1.0" prefWidth="117.99996948242188" text="Availability" />
               </columns>
             </TableView>
             <Label fx:id="groupLabel" layoutX="88.0" text="Truck Information">

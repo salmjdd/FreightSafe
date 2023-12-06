@@ -19,9 +19,10 @@ public class AvailabilityViewController implements Initializable {
     private TableColumn<EquipmentUnit,Integer> tvNumber;
 
     @FXML
-    private TableColumn<EquipmentUnit,Double> tvMiles;
+    private TableColumn<EquipmentUnit, Double> tvMiles;
+
     @FXML
-    private TableColumn<EquipmentUnit,Boolean> tvAvailablity;
+    private TableColumn<EquipmentUnit,Boolean> tvAvailability;
 
     @FXML
     private TableView<EquipmentUnit> tv;
@@ -51,15 +52,16 @@ public class AvailabilityViewController implements Initializable {
 
     private ObservableList<EquipmentUnit> data =
             FXCollections.observableArrayList();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         //we have to populate the observabale list upon initializaiton with the database info
 
-        tvNumber.setCellValueFactory(new PropertyValueFactory<>("truckNumber"));
-        tvMiles.setCellValueFactory(new PropertyValueFactory<>("milesDriven"));
-        tvAvailablity.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
-
+        tvNumber.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Integer>("truckNumber"));
+        tvMiles.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Double>("milesDriven"));
+        tvAvailability.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Boolean>("isAvailable"));
+        tv.setItems(data);
 
 
 

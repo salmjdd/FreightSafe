@@ -19,7 +19,6 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage = new Stage();
         Scene scene = new Scene(loadFXML("hello-view.fxml"));
-
         setScene(scene);
         setStage();
     }

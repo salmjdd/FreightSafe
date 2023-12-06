@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)">
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="added code to go from agencyLandingPage to driver availability view and truck availability view">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/EquipmentUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/EquipmentUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/agentLandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/agentLandingPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/availabilityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/availabilityView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/driverAvailabilityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/driverAvailabilityView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701826111076</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added code to go from agencyLandingPage to driver availability view and truck availability view">
+      <option name="closed" value="true" />
+      <created>1701826460670</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701826460670</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +189,7 @@
     <MESSAGE value="added observable list" />
     <MESSAGE value="added agentLandingPageController and fxml file" />
     <MESSAGE value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
+    <MESSAGE value="added code to go from agencyLandingPage to driver availability view and truck availability view" />
+    <option name="LAST_COMMIT_MESSAGE" value="added code to go from agencyLandingPage to driver availability view and truck availability view" />
   </component>
 </project>

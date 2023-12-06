@@ -12,6 +12,11 @@ public class agentLandingPageController {
     @FXML
     public void viewDriversHandler(ActionEvent event) throws IOException {
         //switch to driverAvailabilityController
+        scene = HelloApplication.getScene();
+        System.out.println("fix me! in agent landing page controller");
+        System.out.println("fix me! in agent landing page controller");
+        System.out.println("fix me! in agent landing page controller");
+        System.out.println("fix me! in agent landing page controller");
         scene = new Scene(HelloApplication.loadFXML("driverAvailabilityView.fxml"));
         HelloApplication.setScene(HelloApplication.scene);
         HelloApplication.setStage();
@@ -20,8 +25,10 @@ public class agentLandingPageController {
     @FXML
     public void viewTrucksHandler(ActionEvent event) throws IOException {
         //switch to AvailabilityViewController
+        scene = HelloApplication.getScene();
+
         scene = new Scene(HelloApplication.loadFXML("availabilityView.fxml"));
-        HelloApplication.setScene(HelloApplication.scene);
+        HelloApplication.setScene(scene);
         HelloApplication.setStage();
     }
 

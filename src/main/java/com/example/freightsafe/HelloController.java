@@ -70,7 +70,9 @@ public class HelloController {
                     }
                 }
             }
-
+        scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
+        HelloApplication.setScene(scene);
+        HelloApplication.setStage();
 
     }
 }

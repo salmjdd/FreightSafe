@@ -22,6 +22,7 @@
             <Label fx:id="hoursDrivenLLabel" layoutX="36.0" layoutY="315.0" prefHeight="17.0" prefWidth="122.0" />
             <Label fx:id="isAvailableLabel" layoutX="46.0" layoutY="325.0" prefHeight="17.0" prefWidth="122.0" />
             <Label fx:id="hasTakenBreakLabel" layoutX="56.0" layoutY="335.0" prefHeight="17.0" prefWidth="122.0" />
+            <Button fx:id="returnButton" layoutX="30.0" layoutY="21.0" mnemonicParsing="false" text="&lt;" />
             </children>
         </AnchorPane>
         <AnchorPane prefHeight="400.0" prefWidth="436.0">

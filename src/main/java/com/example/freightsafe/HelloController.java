@@ -70,6 +70,13 @@ public class HelloController {
                     }
                 }
             }
+        System.out.println("DELETE ME ONCE DATABASE IS WORKING");
+        System.out.println("DELETE ME ONCE DATABASE IS WORKING");
+        System.out.println("DELETE ME ONCE DATABASE IS WORKING");
+        System.out.println("DELETE ME ONCE DATABASE IS WORKING");
+        /*
+        delete the code below so only registered users can enter the app
+         */
         scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
         HelloApplication.setScene(scene);
         HelloApplication.setStage();

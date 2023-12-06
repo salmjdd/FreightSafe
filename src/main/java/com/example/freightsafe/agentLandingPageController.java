@@ -2,19 +2,27 @@ package com.example.freightsafe;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class agentLandingPageController {
+    public Scene scene;
     @FXML
-    public void viewDriversHandler(ActionEvent event) {
+    public void viewDriversHandler(ActionEvent event) throws IOException {
         //switch to driverAvailabilityController
+        scene = new Scene(HelloApplication.loadFXML("driverAvailabilityView.fxml"));
+        HelloApplication.setScene(HelloApplication.scene);
+        HelloApplication.setStage();
     }
 
     @FXML
-    public void viewTrucksHandler(ActionEvent event) {
+    public void viewTrucksHandler(ActionEvent event) throws IOException {
         //switch to AvailabilityViewController
+        scene = new Scene(HelloApplication.loadFXML("availabilityView.fxml"));
+        HelloApplication.setScene(HelloApplication.scene);
+        HelloApplication.setStage();
     }
 
 }

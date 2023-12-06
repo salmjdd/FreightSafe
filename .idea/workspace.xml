@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="added observable list">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Types-of-Trucking-Services.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/Types-of-Trucking-Services.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "switchingScene",
     "last_opened_file_path": "C:/Users/cyber/IdeaProjects/FreightSafev2/src/main/resources/com/example/freightsafe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -154,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701645243424</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)">
+      <option name="closed" value="true" />
+      <created>1701826111076</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701826111076</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +171,7 @@
     <MESSAGE value="gui for driver output" />
     <MESSAGE value="added observable list" />
     <MESSAGE value="added agentLandingPageController and fxml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added agentLandingPageController and fxml file" />
+    <MESSAGE value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
   </component>
 </project>

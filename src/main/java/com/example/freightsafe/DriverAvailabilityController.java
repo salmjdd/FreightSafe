@@ -39,7 +39,7 @@ public class DriverAvailabilityController implements Initializable {
         driverTVname.setCellValueFactory(new PropertyValueFactory<>("name"));
         driverTVcdl.setCellValueFactory(new PropertyValueFactory<>("hasCDL"));
         driverTVavailability.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
-
+        tv.setItems(data);
         //we have to populate the observabale list upon initializaiton with the database info
         returnButton.setOnMouseClicked(e->{
             try {

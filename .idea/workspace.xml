@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="agency landing leads to successful EquipmentUnit gui">
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="can see trucks and go back to landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/agentLandingPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/agentLandingPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/agentLandingPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/availabilityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/availabilityView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701828394139</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="can see trucks and go back to landing page">
+      <option name="closed" value="true" />
+      <created>1701829324433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701829324433</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +199,7 @@
     <MESSAGE value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
     <MESSAGE value="added code to go from agencyLandingPage to driver availability view and truck availability view" />
     <MESSAGE value="agency landing leads to successful EquipmentUnit gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="agency landing leads to successful EquipmentUnit gui" />
+    <MESSAGE value="can see trucks and go back to landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="can see trucks and go back to landing page" />
   </component>
 </project>

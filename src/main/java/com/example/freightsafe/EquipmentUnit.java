@@ -1,32 +1,38 @@
 package com.example.freightsafe;
 
-public class EquipmentUnit {
-    public int truckNumber;
-    public double milesDriven;
-    public boolean isAvailable;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 
-    public EquipmentUnit(int truckNumber, double milesDriven,
-                         boolean isAvailable
+public class EquipmentUnit {
+    public Double truckNumber;
+    public Double milesDriven;
+    public String isAvailable;
+
+    private SimpleBooleanProperty bolAve;
+
+    public EquipmentUnit(Double truckNumber, Double milesDriven,
+                         String isAvailable
                          ){
 
         this.truckNumber = truckNumber;
         this.milesDriven = milesDriven;
         this.isAvailable = isAvailable;
+        //this.bolAve = bolAve;
 
     }
 
     public EquipmentUnit(){
-        truckNumber = 0;
-        milesDriven = 0;
-        isAvailable= true;
+        truckNumber = (double) 0;
+        milesDriven = (double) 0;
+        isAvailable= "yes";
     }
 
-    public int getTruckNumber() {
+    public Double getTruckNumber() {
         return truckNumber;
     }
 
     public void setTruckNumber(int truckNumber) {
-        this.truckNumber = truckNumber;
+        this.truckNumber = (double) truckNumber;
     }
 
     public double getMilesDriven() {
@@ -37,11 +43,23 @@ public class EquipmentUnit {
         this.milesDriven = milesDriven;
     }
 
-    public boolean isAvailable() {
+    public String isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(String available) {
         isAvailable = available;
+    }
+
+    public BooleanProperty bolActiveProperty(){
+        return bolAve;
+    }
+
+    public final Boolean getBolActive() {
+        return bolAve.get();
+    }
+
+    public final void setBolActive(Boolean bolActive) {
+        this.bolAve.set(bolActive);
     }
 }

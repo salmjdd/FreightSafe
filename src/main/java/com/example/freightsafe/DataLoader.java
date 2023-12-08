@@ -1,6 +1,7 @@
 package com.example.freightsafe;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
 import java.sql.*;
@@ -10,11 +11,18 @@ public class DataLoader {
     String userID;
     Hashtable<String, String> driverHash;
     Hashtable<String, String> agentHash;
+    ArrayList<EquipmentUnit> truckList = new ArrayList<EquipmentUnit>();
+    ArrayList<Driver> driverList = new ArrayList<Driver>();
     //database objects
     Connection connection;
     Statement statement;
     ResultSet resultSet;
-
+    Double truckID;
+    Double milesDriven;
+    Double grossWeight;
+    Double vehicleLength;
+    String isAvailable;
+    String truckType;
 
     //default constructor
     public DataLoader(){
@@ -57,6 +65,9 @@ public class DataLoader {
     void loadData() throws SQLException {
         loadDriverHashtable();
         loadAgentHashtable();
+        loadTruck();
+        loadDriver();
+        connection.close();
     }
 
     void loadDriverHashtable() throws SQLException {
@@ -93,6 +104,52 @@ public class DataLoader {
         } // fin. retrieving from table...
         System.out.println("Agent Hashtable loaded!");
 
+    }
+
+    void loadTruck() throws SQLException {
+        resultSet = statement.executeQuery("SELECT * FROM truck");
+
+        while (resultSet.next()) {
+
+            truckID = Double.parseDouble(resultSet.getString(1));
+            milesDriven = Double.parseDouble(resultSet.getString(2));
+            grossWeight = Double.parseDouble(resultSet.getString(3));
+            vehicleLength = Double.parseDouble(resultSet.getString(4));
+            isAvailable = resultSet.getString(5);
+            truckType = resultSet.getString(6);
+            System.out.println(truckType);
+            if (truckType.equals("CDL")){
+                truckList.add(new cdlUnit(truckID, milesDriven, isAvailable, grossWeight, vehicleLength));
+            } else {
+                truckList.add(new nonCDLUnit(truckID, milesDriven, isAvailable, grossWeight, vehicleLength));
+            }
+
+        } // fin. retrieving from table...
+        System.out.println("Agent Hashtable loaded!");
+    }
+
+    void loadDriver() throws SQLException{
+        resultSet = statement.executeQuery("SELECT * FROM driver");
+
+        while (resultSet.next()) {
+
+            String fullName = resultSet.getString(3);
+            String hasCDL = resultSet.getString(4);
+            String isAvailable = resultSet.getString(5);
+            String licenseNum = resultSet.getString(6);
+            String phoneNum = resultSet.getString(7);
+            String cdlClass = resultSet.getString(8);
+            String under21 = resultSet.getString(9);
+            String hoursDriven = resultSet.getString(10);
+            String hasTakenBreak = resultSet.getString(11);
+
+            driverList.add(new Driver(fullName, Long.parseLong(licenseNum), Long.parseLong(phoneNum),
+                    hasCDL, cdlClass, under21, Double.parseDouble(hoursDriven), isAvailable,
+                    hasTakenBreak));
+
+        }
+
+        System.out.println("Drivers Loaded");
     }
 
 

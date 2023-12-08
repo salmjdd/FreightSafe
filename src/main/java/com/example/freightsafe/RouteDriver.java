@@ -44,7 +44,7 @@ public class RouteDriver extends Driver implements DriverQualifications {
     @Override
     public boolean checkHours() {
         //check hours
-        if ((getHoursDriven() >= 8.5) && !getHasTakenBreak())
+        if ((getHoursDriven() >= 8.5) && getHasTakenBreak().equals("no"))
             return false;
         return true;
     }
@@ -57,7 +57,7 @@ public class RouteDriver extends Driver implements DriverQualifications {
 
     @Override
     public boolean checkAge() {
-        if (isUnder21()) {
+        if (isUnder21().equals("yes")) {
             return false;
         }
         return true;

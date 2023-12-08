@@ -2,12 +2,12 @@ package com.example.freightsafe;
 
 public class cdlUnit extends EquipmentUnit{
 
-    protected int grossVehicleWeight;
-    protected int vehicleLength;
-    public cdlUnit(int truckNum, int milesDriven,
-                      boolean isAvailable,
-                      int grossVehicleWeight,
-                      int vehicleLength){
+    protected Double grossVehicleWeight;
+    protected Double vehicleLength;
+    public cdlUnit(Double truckNum, Double milesDriven,
+                      String isAvailable,
+                      Double grossVehicleWeight,
+                      Double vehicleLength){
 
         super(truckNum, milesDriven, isAvailable);
 

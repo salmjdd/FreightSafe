@@ -1,17 +1,19 @@
 package com.example.freightsafe;
 
+import javafx.beans.property.SimpleBooleanProperty;
+
 public class nonCDLUnit extends EquipmentUnit {
 
-    protected int grossVehicleWeight;
-    protected int vehicleLength;
-    public nonCDLUnit(int truckNum, int milesDriven,
-                      boolean isAvailable,
-                      int grossVehicleWeight,
-                      int vehicleLength){
+    protected Double grossVehicleWeight;
+    protected Double vehicleLength;
+    public nonCDLUnit(Double truckNum, Double milesDriven,
+                      String isAvailable,
+                      Double grossVehicleWeight,
+                      Double vehicleLength){
 
-        super(truckNum, milesDriven, isAvailable );
+        super(truckNum, milesDriven, isAvailable);
 
-        if (grossVehicleWeight > 26000 || vehicleLength > 26){
+        if (grossVehicleWeight >= 26000 || vehicleLength > 26){
             throw new IllegalArgumentException("Vehicle requires CDL");
         }
 
@@ -19,4 +21,6 @@ public class nonCDLUnit extends EquipmentUnit {
         this.vehicleLength = vehicleLength;
 
     }
+
+
 }

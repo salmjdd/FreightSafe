@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="can see trucks and go back to landing page">
+    <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="updated back end for driver/truck views">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/checklistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/driverLandingPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreightSafe.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/FreightSafe.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/AvailabilityViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/DriverAvailabilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/EquipmentUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/EquipmentUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/OTRDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/OTRDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/RouteDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/RouteDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/cdlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/cdlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/nonCDLUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/nonCDLUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,35 +73,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/cyber/IdeaProjects/FreightSafev2/src/main/resources/com/example/freightsafe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47126436",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;driver-profile-viewa&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cyber/IdeaProjects/FreightSafev2/src/main/resources/com/example/freightsafe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47126436&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cyber\IdeaProjects\FreightSafev2\src\main\resources\com\example\freightsafe" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\micha\IdeaProjects\CSC325\Capstone Project\src\main\resources\com\example\freightsafe" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -100,6 +111,11 @@
       <updated>1698701609424</updated>
       <workItem from="1701641302997" duration="4227000" />
       <workItem from="1701706759654" duration="678000" />
+      <workItem from="1701990619622" duration="3501000" />
+      <workItem from="1701996979694" duration="443000" />
+      <workItem from="1701997718123" duration="1014000" />
+      <workItem from="1702004555726" duration="464000" />
+      <workItem from="1702038305001" duration="3802000" />
     </task>
     <task id="LOCAL-00001" summary="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'">
       <option name="closed" value="true" />
@@ -149,39 +165,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701645243424</updated>
     </task>
-    <task id="LOCAL-00007" summary="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)">
-      <option name="closed" value="true" />
-      <created>1701826111076</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1701826111076</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added code to go from agencyLandingPage to driver availability view and truck availability view">
-      <option name="closed" value="true" />
-      <created>1701826460670</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1701826460670</updated>
-    </task>
-    <task id="LOCAL-00009" summary="agency landing leads to successful EquipmentUnit gui">
-      <option name="closed" value="true" />
-      <created>1701828394139</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701828394139</updated>
-    </task>
-    <task id="LOCAL-00010" summary="can see trucks and go back to landing page">
-      <option name="closed" value="true" />
-      <created>1701829324433</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701829324433</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,10 +178,7 @@
     <MESSAGE value="gui for driver output" />
     <MESSAGE value="added observable list" />
     <MESSAGE value="added agentLandingPageController and fxml file" />
-    <MESSAGE value="added code in HelloController to switch to agentLandingPage and driverLandingPage(still need driverLandingPage)" />
-    <MESSAGE value="added code to go from agencyLandingPage to driver availability view and truck availability view" />
-    <MESSAGE value="agency landing leads to successful EquipmentUnit gui" />
-    <MESSAGE value="can see trucks and go back to landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="can see trucks and go back to landing page" />
+    <MESSAGE value="updated back end for driver/truck views" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated back end for driver/truck views" />
   </component>
 </project>

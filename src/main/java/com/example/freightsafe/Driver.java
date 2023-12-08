@@ -2,30 +2,30 @@ package com.example.freightsafe;
 
 public class Driver {
     private String name;
-    private int licenseNum;
-    private int phoneNum;
-    private boolean hasCDL;
-    private char cdlClass;
-    private boolean under21;
+    private long licenseNum;
+    private long phoneNum;
+    private String hasCDL;
+    private String cdlClass;
+    private String under21;
     private double hoursDriven;
-    private boolean isAvailable;
-    private boolean hasTakenBreak;
+    private String isAvailable;
+    private String hasTakenBreak;
 
 
     public Driver() {
         name = "";
         licenseNum = 0;
         phoneNum = 0;
-        hasCDL = false;
-        cdlClass = 'z';
-        under21 = false;
+        hasCDL = "yes";
+        cdlClass = "A";
+        under21 = "no";
         hoursDriven = 0;
-        isAvailable = true;
-        hasTakenBreak = false;
+        isAvailable = "yes";
+        hasTakenBreak = "yes";
 
     }
 
-    public Driver(String name, int licenseNum, int phoneNum, boolean hasCDL, char cDLClass, boolean under21, double hoursDriven, boolean isAvailable, boolean hasTakenBreak) {
+    public Driver(String name, long licenseNum, long phoneNum, String hasCDL, String cDLClass, String under21, double hoursDriven, String isAvailable, String hasTakenBreak) {
         this.name = name;
         this.licenseNum = licenseNum;
         this.phoneNum = phoneNum;
@@ -47,43 +47,43 @@ public class Driver {
         this.name = name;
     }
 
-    public int getLicenseNum() {
+    public long getLicenseNum() {
         return licenseNum;
     }
 
-    public void setLicenseNum(int licenseNum) {
+    public void setLicenseNum(long licenseNum) {
         this.licenseNum = licenseNum;
     }
 
-    public int getPhoneNum() {
+    public long getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(long phoneNum) {
         this.phoneNum = phoneNum;
     }
 
-    public boolean isHasCDL() {
+    public String isHasCDL() {
         return hasCDL;
     }
 
-    public void setHasCDL(boolean hasCDL) {
+    public void setHasCDL(String hasCDL) {
         this.hasCDL = hasCDL;
     }
 
-    public char getCDLClass() {
+    public String getCDLClass() {
         return cdlClass;
     }
 
-    public void setCDLClass(char cdlClass) {
+    public void setCDLClass(String cdlClass) {
         this.cdlClass = cdlClass;
     }
 
-    public boolean isUnder21() {
+    public String isUnder21() {
         return under21;
     }
 
-    public void setUnder21(boolean under21) {
+    public void setUnder21(String under21) {
         this.under21 = under21;
     }
 
@@ -95,16 +95,16 @@ public class Driver {
         this.hoursDriven = hoursDriven;
     }
 
-    public boolean isAvailable() {
+    public String isAvailable() {
         return isAvailable;
     }
 
-    public boolean getHasTakenBreak(){return hasTakenBreak;}
+    public String getHasTakenBreak(){return hasTakenBreak;}
 
-    public void setHasTakenBreak(boolean bbreak){
+    public void setHasTakenBreak(String bbreak){
         hasTakenBreak = bbreak;
     }
-    public void setAvailable(boolean available) {
+    public void setAvailable(String available) {
         isAvailable = available;
     }
 ////////////////////////////// IMPLEMENT

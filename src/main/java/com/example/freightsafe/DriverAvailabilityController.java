@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class DriverAvailabilityController implements Initializable {
@@ -26,7 +27,7 @@ public class DriverAvailabilityController implements Initializable {
     @FXML
     private TableColumn<Driver, String> driverTVname;
     @FXML
-    private TableColumn<Driver, Boolean> driverTVcdl, driverTVavailability;
+    private TableColumn<Driver, String> driverTVcdl, driverTVavailability;
     @FXML
     private Button returnButton;
 
@@ -41,6 +42,17 @@ public class DriverAvailabilityController implements Initializable {
         driverTVavailability.setCellValueFactory(new PropertyValueFactory<>("isAvailable"));
         tv.setItems(data);
         //we have to populate the observabale list upon initializaiton with the database info
+
+        try {
+            loadDriverInfo();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         returnButton.setOnMouseClicked(e->{
             try {
                 scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
@@ -52,5 +64,17 @@ public class DriverAvailabilityController implements Initializable {
 
         });
 
+    }
+
+    void loadDriverInfo() throws SQLException, ClassNotFoundException, IOException {
+        DataLoader driverLoader = new DataLoader();
+        driverLoader.connectDB();
+        driverLoader.loadData();
+        System.out.println("loaded");
+
+        for (int i = 0; i < driverLoader.driverList.size(); i++) {
+            Driver curDriver = driverLoader.driverList.get(i);
+            tv.getItems().add(curDriver);
+        }
     }
 }

@@ -13,25 +13,26 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AvailabilityViewController implements Initializable {
 
 
     @FXML
-    private TableColumn<EquipmentUnit,Integer> tvNumber;
+    private TableColumn<Object, Integer> tvNumber;
 
     @FXML
-    private TableColumn<EquipmentUnit, Double> tvMiles;
+    private TableColumn<Object, Double> tvMiles;
 
     @FXML
-    private TableColumn<EquipmentUnit,Boolean> tvAvailability;
+    private TableColumn<Object, Boolean> tvAvailability;
 
     @FXML
     private Button returnButton;
 
     @FXML
-    private TableView<EquipmentUnit> tv;
+    private TableView<Object> tv;
 
 
     /**
@@ -55,7 +56,7 @@ public class AvailabilityViewController implements Initializable {
     private Label numberLabel, milesLabel, weightLabel, lengthLabel, availabilityLabel;
     private Scene scene;
 
-    private ObservableList<EquipmentUnit> data =
+    private ObservableList<Object> data =
             FXCollections.observableArrayList();
 
     @Override
@@ -63,10 +64,23 @@ public class AvailabilityViewController implements Initializable {
 
         //we have to populate the observabale list upon initializaiton with the database info
 
-        tvNumber.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Integer>("truckNumber"));
-        tvMiles.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Double>("milesDriven"));
-        tvAvailability.setCellValueFactory(new PropertyValueFactory<EquipmentUnit, Boolean>("isAvailable"));
+        tvNumber.setCellValueFactory(new PropertyValueFactory<Object, Integer>("truckNumber"));
+        tvMiles.setCellValueFactory(new PropertyValueFactory<Object, Double>("milesDriven"));
+        tvAvailability.setCellValueFactory(new PropertyValueFactory<Object, Boolean>("isAvailable"));
         tv.setItems(data);
+
+        try {
+            loadTruckInfo();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
 
         returnButton.setOnMouseClicked(mouseEvent -> {
             try {
@@ -82,5 +96,17 @@ public class AvailabilityViewController implements Initializable {
 
 
 
+    }
+
+    void loadTruckInfo() throws SQLException, ClassNotFoundException, IOException {
+        DataLoader truck = new DataLoader();
+        truck.connectDB();
+        truck.loadData();
+        System.out.println("loaded");
+
+        for (int i = 0; i < truck.truckList.size(); i++) {
+            Object curTruck = truck.truckList.get(i);
+            tv.getItems().add(curTruck);
+        }
     }
 }

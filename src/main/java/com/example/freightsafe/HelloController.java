@@ -35,8 +35,7 @@ public class HelloController {
         System.out.println("test");
         Hashtable driverHash = test1.getDriverHash();
         Hashtable agentHash = test1.getAgentHash();
-        System.out.println(agentHash.containsKey("salmanmajid22"));
-        System.out.println(driverHash.containsKey("salmanmajid22"));
+        test1.connection.close();
         String user = "", pass = "", enteredpass = "";
         String userID = "";
 
@@ -61,7 +60,9 @@ public class HelloController {
                         scene = new Scene(HelloApplication.loadFXML("driverLandingPage.fxml"));
                         HelloApplication.setScene(scene);
                         HelloApplication.setStage();
-                    } else { //only other case is that the username was in the agentHash
+
+                    }
+                    if(agentHash.containsKey(user)){
                         statusText.setText("Welcome agent");
                         //switch to agentLandingPage
                         scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
@@ -70,16 +71,16 @@ public class HelloController {
                     }
                 }
             }
+        /*System.out.println("DELETE ME ONCE DATABASE IS WORKING");
         System.out.println("DELETE ME ONCE DATABASE IS WORKING");
         System.out.println("DELETE ME ONCE DATABASE IS WORKING");
         System.out.println("DELETE ME ONCE DATABASE IS WORKING");
-        System.out.println("DELETE ME ONCE DATABASE IS WORKING");
-        /*
-        delete the code below so only registered users can enter the app
-         */
+
+        //delete the code below so only registered users can enter the app
+
         scene = new Scene(HelloApplication.loadFXML("agentLandingPage.fxml"));
         HelloApplication.setScene(scene);
-        HelloApplication.setStage();
+        HelloApplication.setStage();*/
 
     }
 }

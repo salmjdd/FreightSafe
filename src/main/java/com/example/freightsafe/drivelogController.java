@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class drivelogController {
@@ -28,7 +29,7 @@ public class drivelogController {
     }
 
     @FXML
-    public void submitHandler(){
+    public void submitHandler() throws IOException {
         System.out.println("Submitting");
         String clockinTime = clockinText.getText();
         String breakoutTime = breakoutText.getText();
@@ -48,7 +49,10 @@ public class drivelogController {
             a.show();
         }
 
-    }
+        Scene scene = new Scene (HelloApplication.loadFXML("driverAvailabilityView.fxml"));
+        HelloApplication.setScene(scene);
+        HelloApplication.setStage();
+        }
 
     public static long convertToMilliseconds(String time) {
         String[] parts = time.split(":");

@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/drivelogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/checklistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/checklistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/drivelog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/drivelog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/drivelogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/drivelogController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="implementing-themeSwitching" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "driver-profile-viewa",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/cyber/IdeaProjects/FreightSafev2/src/main/resources/com/example/freightsafe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

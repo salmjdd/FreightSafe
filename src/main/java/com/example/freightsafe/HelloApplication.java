@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         stage = new Stage();
-        Scene scene = new Scene(loadFXML("drivelog.fxml"));
+        Scene scene = new Scene(loadFXML("hello-view.fxml"));
         setScene(scene);
         setStage();
     }

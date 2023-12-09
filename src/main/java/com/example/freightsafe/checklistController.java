@@ -65,6 +65,7 @@ public class checklistController {
     public void subMitbutton() {
         if (areAnyButtonsNotSelected()){
             System.out.println("a button is not selected");
+            //create an alert that asks user to fix issue
         }else {
             //switch to driver log
             System.out.println("switch to dlog");

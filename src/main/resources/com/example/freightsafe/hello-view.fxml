@@ -25,7 +25,7 @@
                   <Image url="@Types-of-Trucking-Services.jpg" />
                </image>
         </ImageView>
-        <TextField id="txtUserID" fx:id="userText" layoutX="450.0" layoutY="227.0" promptText="User ID">
+        <TextField id="txtUserID" fx:id="userText" layoutX="450.0" layoutY="244.0" promptText="User ID">
           <font>
             <Font size="14.0" />
           </font>
@@ -40,22 +40,38 @@
             <Font name="OCR A Extended" size="64.0" />
           </font>
         </Text>
-        <Text fill="WHITE" layoutX="500.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+        <Text fill="WHITE" layoutX="500.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
           <font>
             <Font name="OCR A Extended" size="24.0" />
           </font>
         </Text>
-        <Button id="btnLogin" layoutX="513.0" layoutY="318.0" mnemonicParsing="false" onAction="#loginHandler" text="Login" />
-            <Text fx:id="statusText" fill="WHITE" layoutX="428.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input info!" textAlignment="CENTER" wrappingWidth="216.20904541015625">
+        <Button id="btnLogin" layoutX="513.0" layoutY="335.0" mnemonicParsing="false" onAction="#loginHandler" text="Login" />
+            <Text fx:id="statusText" fill="WHITE" layoutX="428.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input info!" textAlignment="CENTER" wrappingWidth="216.20904541015625">
                <font>
                   <Font name="OCR A Extended" size="14.0" />
                </font>
             </Text>
-            <PasswordField fx:id="passwordText" layoutX="450.0" layoutY="274.0" promptText="Password">
+            <PasswordField fx:id="passwordText" layoutX="450.0" layoutY="291.0" promptText="Password">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
+            <Text fill="WHITE" layoutX="486.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up!">
+               <font>
+                  <Font name="OCR A Extended" size="24.0" />
+               </font>
+            </Text>
+            <Button id="btnLogin" layoutX="506.0" layoutY="114.0" mnemonicParsing="false" onAction="#signupHandler" text="Sign up" />
+            <Text fill="WHITE" layoutX="462.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have">
+               <font>
+                  <Font name="OCR A Extended" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="455.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="an account?" wrappingWidth="161.85693359375">
+               <font>
+                  <Font name="OCR A Extended" size="24.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

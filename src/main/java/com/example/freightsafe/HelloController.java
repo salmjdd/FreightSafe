@@ -19,6 +19,8 @@ public class HelloController {
     public PasswordField passwordText;
     @FXML
     public Text statusText;
+    @FXML
+    public Text signupStatus;
     private Scene scene;
 
     public DataLoader test1 = new DataLoader();
@@ -82,5 +84,12 @@ public class HelloController {
         HelloApplication.setScene(scene);
         HelloApplication.setStage();*/
 
+    }
+
+    @FXML
+    public void signupHandler() throws IOException {
+        scene = new Scene(HelloApplication.loadFXML("signup.fxml"));
+        HelloApplication.setScene(scene);
+        HelloApplication.setStage();
     }
 }

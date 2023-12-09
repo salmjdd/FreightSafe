@@ -129,19 +129,19 @@ public class DataLoader {
     }
 
     void loadDriver() throws SQLException{
-        resultSet = statement.executeQuery("SELECT * FROM driver");
+        resultSet = statement.executeQuery("SELECT * FROM driverinfo");
 
         while (resultSet.next()) {
 
-            String fullName = resultSet.getString(3);
-            String hasCDL = resultSet.getString(4);
-            String isAvailable = resultSet.getString(5);
-            String licenseNum = resultSet.getString(6);
-            String phoneNum = resultSet.getString(7);
-            String cdlClass = resultSet.getString(8);
-            String under21 = resultSet.getString(9);
-            String hoursDriven = resultSet.getString(10);
-            String hasTakenBreak = resultSet.getString(11);
+            String fullName = resultSet.getString(1);
+            String hasCDL = resultSet.getString(2);
+            String isAvailable = resultSet.getString(3);
+            String licenseNum = resultSet.getString(4);
+            String phoneNum = resultSet.getString(5);
+            String cdlClass = resultSet.getString(6);
+            String under21 = resultSet.getString(7);
+            String hoursDriven = resultSet.getString(8);
+            String hasTakenBreak = resultSet.getString(9);
 
             driverList.add(new Driver(fullName, Long.parseLong(licenseNum), Long.parseLong(phoneNum),
                     hasCDL, cdlClass, under21, Double.parseDouble(hoursDriven), isAvailable,
@@ -150,6 +150,24 @@ public class DataLoader {
         }
 
         System.out.println("Drivers Loaded");
+    }
+
+    void addDriver(String username, String password) throws SQLException {
+        System.out.println("INSERT INTO driver (username, password) VALUES (" +
+                username + ", " +  password + ")");
+        PreparedStatement pstmt = connection.prepareStatement("INSERT INTO driver(username, password) values (?, ?)");
+        pstmt.setString(1, username);
+        pstmt.setString(2, password);
+        pstmt.executeUpdate();
+        connection.close();
+    }
+
+    void addAgent(String username, String password) throws SQLException {
+        PreparedStatement pstmt = connection.prepareStatement("INSERT INTO agent(username, password) values (?, ?)");
+        pstmt.setString(1, username);
+        pstmt.setString(2, password);
+        pstmt.executeUpdate();
+        connection.close();
     }
 
 

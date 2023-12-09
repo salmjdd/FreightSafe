@@ -169,6 +169,13 @@ public class DataLoader {
         pstmt.executeUpdate();
         connection.close();
     }
-
+    void addTime(String clockin, String clockout, String breakin, String breakout) throws SQLException {
+        PreparedStatement pstmt = connection.prepareStatement("INSERT INTO drivelog(clockin, clockout, breakin, breakout) values (?, ?, ?, ?)");
+        pstmt.setString(1, clockin);
+        pstmt.setString(2, clockout);
+        pstmt.setString(3, breakin);
+        pstmt.setString(4, breakout);
+        connection.close();
+    }
 
 }

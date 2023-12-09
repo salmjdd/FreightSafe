@@ -38,14 +38,19 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="clockinText" layoutX="164.0" layoutY="200.0" />
-      <TextField fx:id="breakoutText" layoutX="164.0" layoutY="235.0" />
-      <TextField fx:id="breakinText" layoutX="164.0" layoutY="270.0" />
-      <TextField fx:id="clockoutText" layoutX="164.0" layoutY="305.0" />
+      <TextField fx:id="clockinText" layoutX="164.0" layoutY="200.0" text="00:00" />
+      <TextField fx:id="breakoutText" layoutX="164.0" layoutY="235.0" text="00:00" />
+      <TextField fx:id="breakinText" layoutX="164.0" layoutY="270.0" text="00:00" />
+      <TextField fx:id="clockoutText" layoutX="164.0" layoutY="305.0" text="00:00" />
       <Button layoutX="178.0" layoutY="378.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="87.0" text="Submit" />
       <Button layoutX="339.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
       <Button layoutX="339.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
       <Button layoutX="339.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
       <Button layoutX="339.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
+      <Text fx:id="dateText1" layoutX="77.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All inputs must be military time" wrappingWidth="289.800048828125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

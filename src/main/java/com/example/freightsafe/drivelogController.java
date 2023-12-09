@@ -6,7 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class drivelogController {
@@ -29,30 +29,37 @@ public class drivelogController {
     }
 
     @FXML
-    public void submitHandler() throws IOException {
+    public void submitHandler() throws SQLException, ClassNotFoundException {
+        DataLoader timehandler = new DataLoader();
+        timehandler.connectDB();
         System.out.println("Submitting");
-        String clockinTime = clockinText.getText();
-        String breakoutTime = breakoutText.getText();
-        String breakinTime = breakinText.getText();
-        String clockoutTime = clockoutText.getText();
+        Long clockinTime = convertToMilliseconds(clockinText.getText());
+        Long breakoutTime = convertToMilliseconds(breakoutText.getText());
+        Long breakinTime = convertToMilliseconds(breakinText.getText());
+        Long clockoutTime = convertToMilliseconds(clockoutText.getText());
 
         Alert a = new Alert(Alert.AlertType.WARNING);
         a.setContentText("Compliance Breached!");
         a.setTitle("FreightSafe");
-        a.setHeaderText("WARNING!");
+        a.setHeaderText("WARNING! Compliance Breached!");
 
-        System.out.println("clockout " + convertToMilliseconds(clockoutTime));
-        System.out.println("clockin " + convertToMilliseconds(clockinTime));
-        System.out.println("11 hours" + HOUR_MS * 11L);
-        if ((convertToMilliseconds(clockoutTime) - convertToMilliseconds(clockinTime)) >
+        if ((clockoutTime - clockinTime) >
                 (HOUR_MS * 11L)){
+            a.setContentText("Cannot drive more than 11 hours!");
             a.show();
         }
-
-        Scene scene = new Scene (HelloApplication.loadFXML("driverAvailabilityView.fxml"));
-        HelloApplication.setScene(scene);
-        HelloApplication.setStage();
+        if(((clockoutTime - clockinTime) >= (HOUR_MS * 8L)) && (breakinTime == 0)){
+            a.setContentText("30 minute break required!");
+            a.show();
         }
+        System.out.println("reached");
+        String clockin = msConvert(clockinTime);
+        String clockout = msConvert(clockoutTime);
+        String breakin = msConvert(breakinTime);
+        String breakout = msConvert(breakoutTime);
+        timehandler.addTime(clockin, clockout, breakin, breakout);
+
+    }
 
     public static long convertToMilliseconds(String time) {
         String[] parts = time.split(":");
@@ -65,6 +72,16 @@ public class drivelogController {
         long totalMilliseconds = (hours * 60L + minutes) * 60L * 1000L;
 
         return totalMilliseconds;
+    }
+    public static String msConvert(long milliseconds) {
+        long seconds = milliseconds / 1000;
+
+        long hours = seconds / 3600;
+        long minutes = (seconds % 3600) / 60;
+
+        String timeFormat = String.format("%02d:%02d", hours, minutes);
+
+        return timeFormat;
     }
 
 }

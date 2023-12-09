@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
@@ -32,6 +29,14 @@ public class DriverAvailabilityController implements Initializable {
     private Button returnButton;
 
     private Scene scene;
+
+
+    //justin, when user clicks this, they can add a driver into the database
+
+    @FXML
+    private TextField nameTF, cdlTF, avaiabilityTF;
+    @FXML
+    private Button addDriverButton;
 
     private ObservableList<Driver> data =
             FXCollections.observableArrayList();
@@ -77,4 +82,6 @@ public class DriverAvailabilityController implements Initializable {
             tv.getItems().add(curDriver);
         }
     }
+
+
 }

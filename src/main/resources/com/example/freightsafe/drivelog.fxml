@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="470.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.checklistController">
+<AnchorPane fx:id="anchorPane" prefHeight="470.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.drivelogController">
    <children>
       <Text layoutX="166.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drive Log" wrappingWidth="110.0">
          <font>
@@ -38,11 +38,11 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="164.0" layoutY="200.0" />
-      <TextField layoutX="164.0" layoutY="235.0" />
-      <TextField layoutX="164.0" layoutY="270.0" />
-      <TextField layoutX="164.0" layoutY="305.0" />
-      <Button layoutX="178.0" layoutY="378.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="87.0" text="Submit" />
+      <TextField fx:id="clockinText" layoutX="164.0" layoutY="200.0" />
+      <TextField fx:id="breakoutText" layoutX="164.0" layoutY="235.0" />
+      <TextField fx:id="breakinText" layoutX="164.0" layoutY="270.0" />
+      <TextField fx:id="clockoutText" layoutX="164.0" layoutY="305.0" />
+      <Button layoutX="178.0" layoutY="378.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="87.0" text="Submit" />
       <Button layoutX="339.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
       <Button layoutX="339.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
       <Button layoutX="339.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />

@@ -2,15 +2,19 @@ package com.example.freightsafe;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.io.LineNumberInputStream;
 import java.lang.reflect.Array;
 import java.util.*;
+
+import static com.example.freightsafe.HelloApplication.*;
 
 public class checklistController {
 
@@ -38,6 +42,7 @@ public class checklistController {
     RadioButton emergencyEquipment;
     @FXML
     private AnchorPane anchorPane;
+    private Scene scene;
 
 
 
@@ -52,28 +57,19 @@ public class checklistController {
         return false; // All buttons are selected*/
 
     }
-        /*for (Object button: checklist) {
-                RadioButton curButton = (RadioButton) button;
-                if (!curButton.isSelected()) {
-                    System.out.println("a button is not selected");
-                    return true; // At least one button is not selected
-            }
-        }
-        return false; // All buttons are selected*/
-
 
     @FXML
-    public void subMitbutton() {
+    public void subMitbutton() throws IOException {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setContentText("Please resolve issues, then re-perform inspection");
+        a.setContentText("Please resolve issues, then re-perform inspection.");
         a.setTitle("FreightSafe");
         a.setHeaderText("One or more systems unchecked!");
         if (areAnyButtonsNotSelected()){
-            System.out.println("a button is not selected");
             a.show();
         }else {
-            //switch to driver log
-            System.out.println("switch to dlog");
+            scene = new Scene(loadFXML("drivelog.fxml"));
+            setScene(scene);
+            setStage();
         }
 
     }

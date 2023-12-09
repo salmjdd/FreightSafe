@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef10cbea-3c53-4c36-8a0b-b210ea87ef3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/drivelog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/drivelogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/checklistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/freightsafe/checklistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/drivelog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/freightsafe/drivelog.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +108,7 @@
       <workItem from="1702038305001" duration="4740000" />
       <workItem from="1702074058178" duration="38000" />
       <workItem from="1702074998587" duration="2631000" />
-      <workItem from="1702077652306" duration="3149000" />
+      <workItem from="1702077652306" duration="5244000" />
     </task>
     <task id="LOCAL-00001" summary="Updated: Driver, OTRDriver and DriverQualifications&#10;1.driver to store if break has been taken or not&#10;2. OTR driver implements DriverQualifications&#10;3. removed add/remove methods from interface. unnecessaery as the class does not store instances of 'driver'">
       <option name="closed" value="true" />
@@ -172,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702135746498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed error in checklistController">
+      <option name="closed" value="true" />
+      <created>1702137709046</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702137709046</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +198,7 @@
     <MESSAGE value="updated back end for driver/truck views" />
     <MESSAGE value="updated back end for driver/truck views, added driver landing page" />
     <MESSAGE value="added driver sign in page, new records to separate driver login from driver info" />
-    <option name="LAST_COMMIT_MESSAGE" value="added driver sign in page, new records to separate driver login from driver info" />
+    <MESSAGE value="fixed error in checklistController" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error in checklistController" />
   </component>
 </project>

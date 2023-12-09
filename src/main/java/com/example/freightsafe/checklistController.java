@@ -2,6 +2,7 @@ package com.example.freightsafe;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
@@ -63,9 +64,13 @@ public class checklistController {
 
     @FXML
     public void subMitbutton() {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("Please resolve issues, then re-perform inspection");
+        a.setTitle("FreightSafe");
+        a.setHeaderText("One or more systems unchecked!");
         if (areAnyButtonsNotSelected()){
             System.out.println("a button is not selected");
-            //create an alert that asks user to fix issue
+            a.show();
         }else {
             //switch to driver log
             System.out.println("switch to dlog");

@@ -2,31 +2,98 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="470.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.checklistController">
+<AnchorPane fx:id="anchorPane" prefHeight="519.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.checklistController">
    <children>
-      <Text layoutX="130.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Driver" wrappingWidth="174.13671875">
+      <ImageView fitHeight="92.0" fitWidth="427.0" pickOnBounds="true">
+         <image>
+            <Image url="@darkPurple.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="427.0" layoutY="92.0" pickOnBounds="true">
+         <image>
+            <Image url="@lightPurple.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="342.0" fitWidth="427.0" layoutY="177.0" pickOnBounds="true">
+         <image>
+            <Image url="@beige.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="34.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Driver" wrappingWidth="370.814453125">
          <font>
-            <Font size="24.0" />
+            <Font name="Eras Demi ITC" size="48.0" />
          </font>
       </Text>
-      <Text layoutX="107.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete checklist to ensure compliance." wrappingWidth="219.19921875" />
-      <Text layoutX="37.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By checking each box, you are confirming that you have inspected" wrappingWidth="381.814453125" />
-      <RadioButton fx:id="emergencyEquipment" layoutX="166.0" layoutY="378.0" mnemonicParsing="false" text="Emergency equipment" />
-      <RadioButton fx:id="couplingDevices" layoutX="166.0" layoutY="331.0" mnemonicParsing="false" text="Coupling devices" />
-      <RadioButton fx:id="horn" layoutX="166.0" layoutY="261.0" mnemonicParsing="false" text="Horn" />
-      <RadioButton fx:id="windshieldWipers" layoutX="166.0" layoutY="284.0" mnemonicParsing="false" text="Windshield Wipers" />
-      <RadioButton fx:id="reflectorLights" layoutX="166.0" layoutY="213.0" mnemonicParsing="false" text="Reflector lights" />
-      <RadioButton fx:id="steering" layoutX="166.0" layoutY="190.0" mnemonicParsing="false" text="Steering" />
-      <RadioButton fx:id="parkingBrakes" layoutX="166.0" layoutY="167.0" mnemonicParsing="false" text="Parking brake" />
-      <RadioButton fx:id="serviceBrakes" layoutX="166.0" layoutY="145.0" mnemonicParsing="false" text="Service brakes" />
-      <RadioButton fx:id="tires" layoutX="166.0" layoutY="237.0" mnemonicParsing="false" text="Tires" />
-      <RadioButton fx:id="wheelRims" layoutX="166.0" layoutY="354.0" mnemonicParsing="false" text="Wheel rims" />
-      <RadioButton fx:id="rearviewMirrors" layoutX="166.0" layoutY="307.0" mnemonicParsing="false" text="Rearview mirrors" />
-      <Text layoutX="122.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="the system and it is fully functional." />
-      <Button layoutX="202.0" layoutY="417.0" mnemonicParsing="false" onAction="#subMitbutton" text="Submit" />
+      <Text fill="#2f2f2f" layoutX="84.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete checklist to ensure compliance." wrappingWidth="267.19921875">
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font></Text>
+      <Text fill="#2f2f2f" layoutX="147.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By checking each box," wrappingWidth="141.0">
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font></Text>
+      <RadioButton fx:id="emergencyEquipment" layoutX="124.0" layoutY="431.0" mnemonicParsing="false" text="Emergency equipment">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="couplingDevices" layoutX="124.0" layoutY="384.0" mnemonicParsing="false" text="Coupling devices">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="horn" layoutX="124.0" layoutY="314.0" mnemonicParsing="false" text="Horn">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="windshieldWipers" layoutX="124.0" layoutY="337.0" mnemonicParsing="false" text="Windshield Wipers">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="reflectorLights" layoutX="124.0" layoutY="266.0" mnemonicParsing="false" text="Reflector lights">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="steering" layoutX="124.0" layoutY="243.0" mnemonicParsing="false" text="Steering">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="parkingBrakes" layoutX="124.0" layoutY="220.0" mnemonicParsing="false" text="Parking brake">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="serviceBrakes" layoutX="124.0" layoutY="198.0" mnemonicParsing="false" text="Service brakes">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="tires" layoutX="124.0" layoutY="290.0" mnemonicParsing="false" text="Tires">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="wheelRims" layoutX="124.0" layoutY="407.0" mnemonicParsing="false" text="Wheel rims">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="rearviewMirrors" layoutX="124.0" layoutY="360.0" mnemonicParsing="false" text="Rearview mirrors">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font></RadioButton>
+      <Text fill="#2f2f2f" layoutX="110.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="the system and it is fully functional.">
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font></Text>
+      <Button layoutX="179.0" layoutY="460.0" mnemonicParsing="false" onAction="#subMitbutton" text="Submit">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text fill="#2f2f2f" layoutX="81.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="you are confirming that you have inspected" wrappingWidth="273.814453125">
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

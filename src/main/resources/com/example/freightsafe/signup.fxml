@@ -5,34 +5,51 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="321.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.signupController">
+<AnchorPane prefHeight="321.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.signupController">
    <children>
-      <Text fx:id="text" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I am a:" textAlignment="CENTER" wrappingWidth="255.0">
+      <ImageView fitHeight="167.0" fitWidth="256.0" pickOnBounds="true">
+         <image>
+            <Image url="@medPurple.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="160.0" fitWidth="256.0" layoutY="166.0" pickOnBounds="true">
+         <image>
+            <Image url="@beige.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="text" layoutX="67.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I am a:" textAlignment="CENTER" wrappingWidth="122.0">
          <font>
-            <Font name="OCR A Extended" size="24.0" />
+            <Font name="Eras Demi ITC" size="36.0" />
          </font>
       </Text>
-      <RadioButton fx:id="driverButton" layoutX="101.0" layoutY="85.0" mnemonicParsing="false" text="Driver">
+      <RadioButton fx:id="driverButton" layoutX="88.0" layoutY="83.0" mnemonicParsing="false" text="Driver">
          <toggleGroup>
             <ToggleGroup fx:id="driverAgent" />
          </toggleGroup>
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font>
       </RadioButton>
-      <RadioButton fx:id="agentButton" layoutX="101.0" layoutY="110.0" mnemonicParsing="false" text="Agent" toggleGroup="$driverAgent" />
-      <TextField id="txtUserID" fx:id="userText" layoutX="41.0" layoutY="176.0" promptText="Create User ID">
+      <RadioButton fx:id="agentButton" layoutX="88.0" layoutY="120.0" mnemonicParsing="false" text="Agent" toggleGroup="$driverAgent">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font></RadioButton>
+      <TextField id="txtUserID" fx:id="userText" layoutX="42.0" layoutY="192.0" promptText="Create User ID">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="passwordText" layoutX="41.0" layoutY="216.0" promptText="Create Password">
+      <PasswordField fx:id="passwordText" layoutX="42.0" layoutY="231.0" promptText="Create Password">
          <font>
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <Button id="btnLogin" layoutX="105.0" layoutY="259.0" mnemonicParsing="false" onAction="#signupHandler" text="Sign Up" />
+      <Button id="btnLogin" layoutX="99.0" layoutY="280.0" mnemonicParsing="false" onAction="#signupHandler" text="Sign Up" />
    </children>
 </AnchorPane>

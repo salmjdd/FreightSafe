@@ -4,42 +4,68 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.DriverAvailabilityController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.DriverAvailabilityController">
     <children>
-        <AnchorPane prefHeight="400.0" prefWidth="150.0">
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="680.0">
             <children>
-                <Button layoutX="44.0" layoutY="332.0" mnemonicParsing="false" text="More information" />
-                <Label fx:id="nameLabel" layoutX="35.0" layoutY="59.0" prefHeight="17.0" prefWidth="84.0" />
-                <Label fx:id="licenseNumLabel" layoutX="31.0" layoutY="98.0" prefHeight="17.0" prefWidth="77.0" />
-                <Label fx:id="phoneLabel" layoutX="28.0" layoutY="166.0" prefHeight="17.0" prefWidth="84.0" />
-                <Label fx:id="hasCDLLabel" layoutX="31.0" layoutY="232.0" prefHeight="17.0" prefWidth="77.0" />
-                <Label fx:id="cdlClassLabel" layoutX="16.0" layoutY="295.0" prefHeight="17.0" prefWidth="122.0" />
-            <Label fx:id="under21Label" layoutX="26.0" layoutY="305.0" prefHeight="17.0" prefWidth="122.0" />
-            <Label fx:id="hoursDrivenLLabel" layoutX="36.0" layoutY="315.0" prefHeight="17.0" prefWidth="122.0" />
-            <Label fx:id="isAvailableLabel" layoutX="46.0" layoutY="325.0" prefHeight="17.0" prefWidth="122.0" />
-            <Label fx:id="hasTakenBreakLabel" layoutX="56.0" layoutY="335.0" prefHeight="17.0" prefWidth="122.0" />
-            <Button fx:id="returnButton" layoutX="30.0" layoutY="21.0" mnemonicParsing="false" text="&lt;" />
+                <AnchorPane prefHeight="400.0" prefWidth="150.0">
+                    <children>
+                        <ImageView fitHeight="452.0" fitWidth="154.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@darkPurple.png" />
+                            </image>
+                        </ImageView>
+                        <Button layoutX="20.0" layoutY="369.0" mnemonicParsing="false" text="More information" />
+                        <Label fx:id="nameLabel" layoutX="11.0" layoutY="96.0" prefHeight="17.0" prefWidth="84.0" />
+                        <Label fx:id="licenseNumLabel" layoutX="7.0" layoutY="135.0" prefHeight="17.0" prefWidth="77.0" />
+                        <Label fx:id="phoneLabel" layoutX="4.0" layoutY="203.0" prefHeight="17.0" prefWidth="84.0" />
+                        <Label fx:id="hasCDLLabel" layoutX="7.0" layoutY="269.0" prefHeight="17.0" prefWidth="77.0" />
+                        <Label fx:id="cdlClassLabel" layoutX="-8.0" layoutY="332.0" prefHeight="17.0" prefWidth="122.0" />
+                        <Label fx:id="under21Label" layoutX="2.0" layoutY="342.0" prefHeight="17.0" prefWidth="122.0" />
+                        <Label fx:id="hoursDrivenLLabel" layoutX="12.0" layoutY="352.0" prefHeight="17.0" prefWidth="122.0" />
+                        <Label fx:id="isAvailableLabel" layoutX="22.0" layoutY="362.0" prefHeight="17.0" prefWidth="122.0" />
+                        <Label fx:id="hasTakenBreakLabel" layoutX="32.0" layoutY="372.0" prefHeight="17.0" prefWidth="122.0" />
+                        <Button fx:id="returnButton" layoutX="6.0" layoutY="58.0" mnemonicParsing="false" text="&lt;" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="400.0" prefWidth="436.0">
+                    <children>
+                        <ImageView fitHeight="78.0" fitWidth="536.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@medPurple.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="374.0" fitWidth="536.0" layoutY="78.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@beige.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="425.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@freightsafe_logo_white.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="groupLabel1" layoutX="75.0" layoutY="18.0" text="Driver Information" textFill="WHITE">
+                            <font>
+                                <Font name="Eras Demi ITC" size="36.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="tv" layoutX="75.0" layoutY="97.0" prefHeight="337.0" prefWidth="388.0">
+                            <columns>
+                                <TableColumn fx:id="driverTVname" maxWidth="148.00001525878906" minWidth="-1.0" prefWidth="148.00001525878906" text="Name" />
+                                <TableColumn fx:id="driverTVcdl" maxWidth="223.33338928222656" minWidth="-1.0" prefWidth="146.0" text="Has CDL" />
+                                <TableColumn fx:id="driverTVavailability" maxWidth="227.99996948242188" minWidth="-1.0" prefWidth="93.33328247070312" text="Availability" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
             </children>
-        </AnchorPane>
-        <AnchorPane prefHeight="400.0" prefWidth="436.0">
-            <children>
-                <TableView fx:id="tv" layoutX="26.0" layoutY="31.0" prefHeight="337.0" prefWidth="388.0">
-                    <columns>
-                        <TableColumn fx:id="driverTVname" maxWidth="148.00001525878906" minWidth="-1.0" prefWidth="148.00001525878906" text="Name" />
-                        <TableColumn fx:id="driverTVcdl" maxWidth="223.33338928222656" minWidth="-1.0" prefWidth="146.0" text="Has CDL" />
-                        <TableColumn fx:id="driverTVavailability" maxWidth="227.99996948242188" minWidth="-1.0" prefWidth="93.33328247070312" text="Availability" />
-                    </columns>
-                </TableView>
-                <Label fx:id="groupLabel" layoutX="88.0" prefHeight="27.0" prefWidth="168.0" text="Driver Information">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
+        </HBox>
     </children>
 </HBox>

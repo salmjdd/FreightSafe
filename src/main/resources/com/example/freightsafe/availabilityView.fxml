@@ -4,14 +4,21 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.AvailabilityViewController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.AvailabilityViewController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="150.0">
          <children>
+            <ImageView fitHeight="452.0" fitWidth="146.0" pickOnBounds="true">
+               <image>
+                  <Image url="@darkPurple.png" />
+               </image>
+            </ImageView>
             <Label fx:id="numberLabel" layoutX="35.0" layoutY="59.0" prefHeight="17.0" prefWidth="84.0" />
             <Label fx:id="milesLabel" layoutX="31.0" layoutY="98.0" prefHeight="17.0" prefWidth="77.0" />
             <Label fx:id="weightLabel" layoutX="28.0" layoutY="166.0" prefHeight="17.0" prefWidth="84.0" />
@@ -22,16 +29,31 @@
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="436.0">
          <children>
-            <TableView fx:id="tv" layoutX="26.0" layoutY="31.0" prefHeight="337.0" prefWidth="388.0">
-              <columns>
-                <TableColumn fx:id="tvNumber" maxWidth="136.6667022705078" minWidth="-1.0" prefWidth="136.6667022705078" text="Number" />
-                <TableColumn fx:id="tvMiles" maxWidth="198.6667022705078" minWidth="-1.0" prefWidth="132.6666259765625" text="Miles" />
-                 <TableColumn fx:id="tvAvailability" maxWidth="288.00001525878906" minWidth="-1.0" prefWidth="117.99996948242188" text="Availability" />
-              </columns>
+            <ImageView fitHeight="78.0" fitWidth="536.0" pickOnBounds="true">
+               <image>
+                  <Image url="@medPurple.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="374.0" fitWidth="536.0" layoutY="78.0" pickOnBounds="true">
+               <image>
+                  <Image url="@beige.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="413.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@freightsafe_logo_white.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tv" layoutX="75.0" layoutY="97.0" prefHeight="337.0" prefWidth="388.0">
+               <columns>
+                  <TableColumn fx:id="tvNumber" maxWidth="136.6667022705078" minWidth="-1.0" prefWidth="136.6667022705078" text="Number" />
+                  <TableColumn fx:id="tvMiles" maxWidth="198.6667022705078" minWidth="-1.0" prefWidth="132.6666259765625" text="Miles" />
+                  <TableColumn fx:id="tvAvailability" maxWidth="288.00001525878906" minWidth="-1.0" prefWidth="117.99996948242188" text="Availability" />
+               </columns>
             </TableView>
-            <Label fx:id="groupLabel" layoutX="88.0" text="Truck Information">
+            <Label fx:id="groupLabel1" layoutX="75.0" layoutY="19.0" text="Truck Information" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Eras Demi ITC" size="36.0" />
                </font>
             </Label>
          </children>

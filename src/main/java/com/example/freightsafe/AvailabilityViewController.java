@@ -36,10 +36,10 @@ public class AvailabilityViewController implements Initializable {
 
 
     /**
-     * the tableviw displays an observable list of EquipmentUnits.
+     * the tableview displays an observable list of EquipmentUnits.
      *
-     * however, since there are dif types, im chosing to diplay all the units as an
-     * equipment unit an just showing the vields of the parent class.
+     * however, since there are dif types, im choosing to display all the units as an
+     * equipment unit an just showing the fields of the parent class.
      *
      * above i have declared 5 labels, my intention is that when a user selects a truck from
      * the tableview, we can set the labels with all 5 fields of the object.
@@ -62,7 +62,7 @@ public class AvailabilityViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        //we have to populate the observabale list upon initializaiton with the database info
+        //we have to populate the observable list upon initialization with the database info
 
         tvNumber.setCellValueFactory(new PropertyValueFactory<Object, Integer>("truckNumber"));
         tvMiles.setCellValueFactory(new PropertyValueFactory<Object, Double>("milesDriven"));

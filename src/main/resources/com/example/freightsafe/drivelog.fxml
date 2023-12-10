@@ -2,54 +2,70 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="470.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.drivelogController">
+<AnchorPane fx:id="anchorPane" prefHeight="470.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.drivelogController">
    <children>
-      <Text layoutX="166.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drive Log" wrappingWidth="110.0">
+      <ImageView fitHeight="178.0" fitWidth="472.0" pickOnBounds="true">
+         <image>
+            <Image url="@darkPurple.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="339.0" fitWidth="472.0" layoutY="131.0" pickOnBounds="true">
+         <image>
+            <Image url="@beige.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@freightsafe_logo_white.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="19.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drive Log" wrappingWidth="242.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Eras Demi ITC" size="48.0" />
          </font>
       </Text>
-      <Text layoutX="19.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clock in" wrappingWidth="110.0">
+      <Text fx:id="dateText" fill="WHITE" layoutX="19.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="161.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Eras Demi ITC" size="20.0" />
          </font>
       </Text>
-      <Text layoutX="19.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Break out" wrappingWidth="110.0">
+      <TextField fx:id="clockinText" layoutX="177.0" layoutY="251.0" text="00:00" />
+      <TextField fx:id="breakoutText" layoutX="177.0" layoutY="286.0" text="00:00" />
+      <TextField fx:id="breakinText" layoutX="177.0" layoutY="321.0" text="00:00" />
+      <TextField fx:id="clockoutText" layoutX="177.0" layoutY="356.0" text="00:00" />
+      <Button layoutX="187.0" layoutY="396.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="87.0" text="Submit" />
+      <Button layoutX="352.0" layoutY="251.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
+      <Button layoutX="352.0" layoutY="286.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
+      <Button layoutX="352.0" layoutY="321.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
+      <Button layoutX="352.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
+      <Text fx:id="dateText1" fill="#2f2f2f" layoutX="20.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All inputs must be military time" textAlignment="CENTER" wrappingWidth="433.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Eras Medium ITC" size="28.0" />
          </font>
       </Text>
-      <Text layoutX="19.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Break in" wrappingWidth="110.0">
+      <Text fill="#2f2f2f" layoutX="48.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clock In: ">
          <font>
-            <Font size="24.0" />
+            <Font name="Eras Medium ITC" size="24.0" />
+         </font></Text>
+      <Text fill="#2f2f2f" layoutX="48.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Break out:">
+         <font>
+            <Font name="Eras Medium ITC" size="24.0" />
          </font>
       </Text>
-      <Text fx:id="dateText" layoutX="141.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="161.0">
+      <Text fill="#2f2f2f" layoutX="48.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Break In:">
          <font>
-            <Font size="20.0" />
+            <Font name="Eras Medium ITC" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="19.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clock out" wrappingWidth="110.0">
+      <Text fill="#2f2f2f" layoutX="48.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clock Out:">
          <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <TextField fx:id="clockinText" layoutX="164.0" layoutY="200.0" text="00:00" />
-      <TextField fx:id="breakoutText" layoutX="164.0" layoutY="235.0" text="00:00" />
-      <TextField fx:id="breakinText" layoutX="164.0" layoutY="270.0" text="00:00" />
-      <TextField fx:id="clockoutText" layoutX="164.0" layoutY="305.0" text="00:00" />
-      <Button layoutX="178.0" layoutY="378.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="87.0" text="Submit" />
-      <Button layoutX="339.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
-      <Button layoutX="339.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
-      <Button layoutX="339.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
-      <Button layoutX="339.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Get Time" />
-      <Text fx:id="dateText1" layoutX="77.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All inputs must be military time" wrappingWidth="289.800048828125">
-         <font>
-            <Font size="20.0" />
+            <Font name="Eras Medium ITC" size="24.0" />
          </font>
       </Text>
    </children>

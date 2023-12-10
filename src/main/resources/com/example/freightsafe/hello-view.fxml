@@ -11,68 +11,59 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.HelloController">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-        <ImageView fitHeight="434.0" fitWidth="649.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Types-of-Trucking-Services.jpg" />
-               </image>
-        </ImageView>
-        <TextField id="txtUserID" fx:id="userText" layoutX="450.0" layoutY="244.0" promptText="User ID">
-          <font>
-            <Font size="14.0" />
-          </font>
-        </TextField>
-        <Text layoutX="69.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FreightSafe" textAlignment="CENTER" wrappingWidth="287.875">
-          <font>
-            <Font name="OCR A Extended" size="64.0" />
-          </font>
-        </Text>
-        <Text fill="WHITE" layoutX="65.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FreightSafe" textAlignment="CENTER" wrappingWidth="287.875">
-          <font>
-            <Font name="OCR A Extended" size="64.0" />
-          </font>
-        </Text>
-        <Text fill="WHITE" layoutX="500.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
-          <font>
-            <Font name="OCR A Extended" size="24.0" />
-          </font>
-        </Text>
-        <Button id="btnLogin" layoutX="513.0" layoutY="335.0" mnemonicParsing="false" onAction="#loginHandler" text="Login" />
-            <Text fx:id="statusText" fill="WHITE" layoutX="428.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input info!" textAlignment="CENTER" wrappingWidth="216.20904541015625">
-               <font>
-                  <Font name="OCR A Extended" size="14.0" />
-               </font>
-            </Text>
-            <PasswordField fx:id="passwordText" layoutX="450.0" layoutY="291.0" promptText="Password">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </PasswordField>
-            <Text fill="WHITE" layoutX="486.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up!">
-               <font>
-                  <Font name="OCR A Extended" size="24.0" />
-               </font>
-            </Text>
-            <Button id="btnLogin" layoutX="506.0" layoutY="114.0" mnemonicParsing="false" onAction="#signupHandler" text="Sign up" />
-            <Text fill="WHITE" layoutX="462.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have">
-               <font>
-                  <Font name="OCR A Extended" size="24.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="455.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="an account?" wrappingWidth="161.85693359375">
-               <font>
-                  <Font name="OCR A Extended" size="24.0" />
-               </font>
-            </Text>
-      </children>
-    </AnchorPane>
-  </children>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freightsafe.HelloController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="434.0" fitWidth="649.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Types-of-Trucking-Services.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="455.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@freightsafe_logo_white.png" />
+                    </image>
+                </ImageView>
+                <TextField id="txtUserID" fx:id="userText" layoutX="453.0" layoutY="219.0" promptText="User ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Text layoutX="103.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FreightSafe" textAlignment="CENTER" wrappingWidth="226.875">
+                    <font>
+                        <Font name="Eras Demi ITC" size="64.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="99.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FreightSafe" textAlignment="CENTER" wrappingWidth="226.875">
+                    <font>
+                        <Font name="Eras Demi ITC" size="64.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="503.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                    <font>
+                        <Font name="Eras Medium ITC" size="24.0" />
+                    </font>
+                </Text>
+                <Button id="btnLogin" layoutX="513.0" layoutY="313.0" mnemonicParsing="false" onAction="#loginHandler" text="Login">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <PasswordField fx:id="passwordText" layoutX="453.0" layoutY="266.0" promptText="Password">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <Button id="btnLogin" layoutX="507.0" layoutY="359.0" mnemonicParsing="false" onAction="#signupHandler" text="Sign up">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>
